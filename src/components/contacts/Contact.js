@@ -30,7 +30,7 @@ class Contact extends Component {
     }
 
     render() {
-        const { id,name, tel, email } = this.props.data;
+        const { id, name, phone, email } = this.props.data;
         return (
             <Consumer>
                 {value => {
@@ -49,7 +49,7 @@ class Contact extends Component {
                         <p className="card-text">
                             {(this.state.showContactToggle) ? (
                                 <ul className="list-group">
-                                  <li className="list-group-item">{ tel }</li>
+                                  <li className="list-group-item">{ phone }</li>
                                   <li className="list-group-item">{ email }</li>
                                 </ul>
                             ) : null}
@@ -76,7 +76,7 @@ class Contact extends Component {
 
 Contact.defaultProps = {
     name: "My name",
-    tel: "0000",
+    phone: "0000",
     email: "my@gmail.com"
 }
 
